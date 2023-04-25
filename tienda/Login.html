@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+    <style>
+      body {
+        background-color: #1A237E;
+      }
+      h1 {
+        color: #FFFFFF;
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin: 20px 0 5px;
+        color: #FFFFFF;
+      }
+      input[type="text"], input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        background-color: #BDBDBD;
+        color: #1A237E;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #1A237E;
+        color: #FFFFFF;
+      }
+      #mensaje {
+        color: #FFFFFF;
+        text-align: center;
+      }
+      .error {
+        background-color: #B71C1C;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciar sesión</h1>
+    <form>
+      <label for="usuario">Nombre de usuario:</label>
+      <input type="text" id="usuario" name="usuario">
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena">
+      <input type="submit" value="Iniciar sesión">
+    </form>
+    <div id="mensaje"></div>
+    <script>
+      const form = document.querySelector('form');
+      const mensaje = document.querySelector('#mensaje');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const usuario = form.usuario.value;
+        const contrasena = form.contrasena.value;
+        if (usuario === 'nombredeusuario' && contrasena === 'contraseña') {
+          mensaje.textContent = 'Inicio de sesión exitoso';
+          mensaje.classList.remove('error');
+        } else {
+          mensaje.textContent = 'Error: usuario o contraseña incorrectos';
+          mensaje.classList.add('error');
+        }
+      });
+    </script>
+
+  <p style="color: white;">¿No tienes una cuenta? <a href="registro.html" style="color: white;">Regístrate aquí</a></p>
+  </body>
+</html>

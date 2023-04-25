@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tienda en Línea</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Logo de la tienda en línea"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><form action="/buscar" method="GET">
+                        <input type="text" name="q">
+                        <input type="submit" value="Buscar">
+                      </form>
+                      </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1 style="color: black;">Bienvenidos a Tu Tienda en Línea</h1>
+            <p style="color: black;">Aquí encontrarás lo que necesitas con la mejor calidad y precio.</p>
+            <a href="catalogo.html" class="boton-destacado">Conoce nuestros productos</a>
+        </section>
+
+        <section class="descripcion">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una tienda en línea comprometida con ofrecer productos de calidad y a precios accesibles. Contamos con un amplio catálogo de productos para satisfacer las necesidades de nuestros clientes. Nos esforzamos por brindar un servicio excelente y una experiencia de compra satisfactoria.</p>
+        </section>
+
+        <section class="testimonios">
+            <h2>Testimonios de nuestros clientes</h2>
+            <div class="testimonio">
+                <p>"Me encanta comprar en Tu Tienda en Línea. Siempre encuentro lo que necesito y a precios muy competitivos."</p>
+                <p class="autor">- Juan Pérez</p>
+            </div>
+            <div class="testimonio">
+                <p>"La atención al cliente es excelente. Me ayudaron a encontrar el producto que necesitaba y me dieron recomendaciones muy útiles."</p>
+                <p class="autor">- María González</p>
+            </div>
+        </section>
+
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <a href="#"><img src="logo.png" alt="Logo de la tienda en línea"></a>
+        </div>
+        <div class="direccion">
+            <p>123 Calle Principal, Ciudad</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Correo electrónico: info@tuti     </div>
+                <div class="redes">
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                </div>
+            </footer>
+        
+            <script src="script.js"></script>
+        </body>
+        </html>

@@ -1,0 +1,282 @@
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+}
+
+.menu a:hover {
+    color: #007bff;
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-top: 5rem;
+}
+
+/* Estilos para la sección de banner */
+.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+}
+
+.boton-destacado {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.boton-destacado:hover {
+    background-color: #0062cc;
+}
+
+/* Estilos para la sección de descripción */
+.descripcion {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.descripcion h2 {
+    font-size: 2rem;
+    margin: 0 0 2rem;
+}
+
+.descripcion p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 0 2rem;
+}
+
+/* Estilos para la sección de testimonios */
+.testimonios {
+    background-color: #f7f7f7;
+    padding: 4rem 2rem;
+}
+
+.testimonios h2 {
+    font-size: 2rem;
+    margin: 0 0 2rem;
+    text-align: center;
+}
+
+.testimonio {
+    margin: 0 auto 2rem;
+    max-width: 800px;
+}
+
+.testimonio p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+}
+
+.testimonio .autor {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: right;
+}
+
+/* Estilos para la sección de contacto */
+.contacto {
+    background-color: #f2f2f2;
+    padding: 50px;
+  }
+  
+  .contacto h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contacto form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .contacto label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .contacto input,
+  .contacto textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .contacto textarea {
+    height: 150px;
+  }
+  
+  .contacto button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  /* Estilos para los elementos faltantes */
+  .main-footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .main-footer .logo img {
+    width: 100px;
+  }
+  
+  .main-footer .direccion p {
+    margin: 5px 0;
+  }
+  
+  .main-footer .redes a {
+    margin-right: 10px;
+  }
+  
+  .main-footer .redes a img {
+    width: 30px;
+  }
+
+  /* Estilos para el pie de página */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px;
+}
+
+footer .logo {
+  margin-bottom: 20px;
+}
+
+footer .direccion {
+  margin-bottom: 20px;
+}
+
+footer .redes {
+  display: flex;
+  justify-content: center;
+}
+
+footer .redes a {
+  display: inline-block;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #222;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .redes a:hover {
+  background-color: #fff;
+  color: #222;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #444444;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.direccion, .redes {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.redes img {
+  margin: 0 10px;
+}
+

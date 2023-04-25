@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registro de usuario</title>
+    <style>
+      body {
+        background-color: #1B5E20;
+      }
+      h1 {
+        color: #FFFFFF;
+        text-align: center;
+      }
+      form {
+        margin: auto;
+        max-width: 500px;
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input[type="text"], input[type="date"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 5px;
+      }
+      input[type="submit"] {
+        background-color: #1B5E20;
+        color: #FFFFFF;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #1A237E;
+        color: #FFFFFF;
+      }
+      #mensaje {
+        color: #FFFFFF;
+        text-align: center;
+      }
+      .error {
+        background-color: #B71C1C;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registro de usuario</h1>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido">
+      <label for="cedula">Cédula:</label>
+      <input type="text" id="cedula" name="cedula">
+      <label for="fecha">Fecha de nacimiento:</label>
+      <input type="date" id="fecha" name="fecha">
+      <label for="correo">Correo electrónico:</label>
+      <input type="text" id="correo" name="correo">
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena">
+      <input type="submit" value="Registrar">
+    </form>
+    <div id="mensaje"></div>
+    <script>
+      const form = document.querySelector('form');
+      const mensaje = document.querySelector('#mensaje');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const nombre = form.nombre.value;
+        const apellido = form.apellido.value;
+        const cedula = form.cedula.value;
+        const fecha = form.fecha.value;
+        const correo = form.correo.value;
+        const contrasena = form.contrasena.value;
+        // Validar que los campos estén llenos
+        if (!nombre || !apellido || !cedula || !fecha || !correo || !contrasena) {
+          mensaje.textContent = 'Error: todos los campos son requeridos';
+          mensaje.classList.add('error');
+          return;
+        }
+        // Validar que la cédula tenga solo números y tenga 10 dígitos
+        if (!/^\d{10}$/.test(cedula)) {
+          mensaje.textContent = 'Error: cédula inválida';
+          mensaje.classList.add('error');
+          return;
+        }
+        mensaje.textContent = 'Registro exitoso';
+        mensaje.classList.remove('error');
+      });
+    </script>
+    <p style="color: white;">¿Ya tienes una cuenta? <a href="Login.html" style="color: white;">Login</a></p>
+  </body>
+</html>
